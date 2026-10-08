@@ -1,11 +1,47 @@
 #include <iostream>
 using namespace std;
+/*void pattern10(int n)
+    {
+        for(int i=1;i<2*n-1;i++){
+             int stars=i;
+             if(i>n)
+               stars=2*n-i;
+             for(int j=1;j<=stars;j++){
+                cout<<"*";
+
+             }
+             cout<<endl;
+
+
+        }
+    }*/
+void pattern11(int n){
+     int start =1;
+    for(int i=0;i<=n;i++){
+        if(i%2==0)
+        start=1;
+        else
+        start=0;
+        for(int j=0;j<=i;j++){
+            cout<<start;
+            start= 1-start;
+        }
+        cout<<endl;
+    }
+
+}
 int main()
-{
-    int n;
-    cout << "Enter the number of rows:";
-    cin >> n;
-    //pattern 1
+{   
+    int t;
+    cin>>t;
+    for(int i=0;i<t;i++){
+        int n;
+        cin>>n;
+        pattern11(n);
+    }
+    return 0;
+}
+    /*//pattern 1
     /*for (int i = 0; i < n; i++)
     {
         for (int j = 0; j <=i; j++)
@@ -29,22 +65,19 @@ int main()
     cout<<endl;
    }*/
   //pattern 4
-   for(int i=0;i<n;i++){
-        //spaces
-        for(int j=0;j<n-i-1;j++){
-            cout<<" ";
-        }
-        //stars
-        for(int j=0;j<2*i+1;j++){
-            cout<<"*";
-        }
-        //spaces
-        for(int j=0;j<n-i-1;j++){
-            cout<<" ";
-        }
-        cout<<endl;
-   }
-   
-    return 0;
+   //for(int i=0;i<n;i++){
 
-}
+        
+       // for(int j=0;j<n-i-1;j++){
+            //cout<<" ";
+        
+       // for(int j=0;j<2*i+1;j++){
+            //cout<<"*";
+        //}
+        //for(int j=0;j<n-i-1;j++){
+           // cout<<" ";
+        //}
+        //cout<<endl;*/
+
+   
+    
